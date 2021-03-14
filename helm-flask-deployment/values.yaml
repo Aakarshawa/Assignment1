@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: mrasap/flask
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP #LoadBalancer
+  port: 80 # 8080
+  targetPort: 8080 # http
