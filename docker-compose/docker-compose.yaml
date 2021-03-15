@@ -9,11 +9,6 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=mypass
-      db:
-    image: postgres:10
-    env_file: .env
-    expose:
-      - 5432
   web:
     build:
       context: .
@@ -24,6 +19,11 @@ services:
       - .:/app
     ports:
       - "5000:5000"
+        postgres:
+    image: postgres:10
+    env_file: .env
+    expose:
+      - 5432
     links:
       - rabbit
       - redis
