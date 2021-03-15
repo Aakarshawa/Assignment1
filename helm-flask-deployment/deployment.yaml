@@ -4,7 +4,6 @@ metadata:
   name: {{ include "flask.fullname" . }}
   labels:
     app.kubernetes.io/name: {{ include "flask.name" . }}
-    helm.sh/chart: {{ include "flask.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
