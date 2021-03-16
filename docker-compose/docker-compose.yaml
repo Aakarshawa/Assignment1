@@ -18,7 +18,7 @@ services:
       - .:/app
     ports:
       - "5000:5000"
-        postgres:
+  postgres:
     image: postgres:10
     env_file: .env
     expose:
